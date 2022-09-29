@@ -1,38 +1,56 @@
+h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
 .App {
-  text-align: center;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    color: #FFF;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slovo{
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 90vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #FFF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slovo > div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.slovo .de {
+    text-decoration: underline;
+    font-size: 22px;
 }
 
-.App-link {
-  color: #61dafb;
+.search{
+    padding: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search input{
+    height: 30px;
+    width: 90vw;
+    font-size: 20px;
 }
