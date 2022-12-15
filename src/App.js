@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Data from "./components/data";
 import SearchBar from "./components/searchBar";
-import "./app.css"
+import "./App.css"
 import dataJson from "./slovicka2.json"
 
 const letters = {
