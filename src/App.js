@@ -1,38 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Data from "./components/data";
 import SearchBar from "./components/searchBar";
 import "./app.css"
+import dataJson from "./slovicka2.json"
 
 const letters = {
   "á": "a", "č":"c", "ď":"d", "é":"e", "ě":"e", "í":"i", "ň":"n", "ó":"o", "ř":"r", "š":"s", "ť":"t", "ú":"u", "ů":"u", "ý":"y", "ž":"z"
 }
 
 function App() {
-  const [data, changeData] = useState([])
-  const [displayData, changeDisplayData] = useState([])
-
-  useEffect(() => {
-    const url = "/data";
-
-    const fetchData = async () => {
-      try {
-        fetch(url).then(
-          res => {
-            if (res.ok){
-              res.json().then(json=>{
-                changeData(json)
-                changeDisplayData(json)
-              })
-            }
-          }
-        );
-      } catch (error) {
-        console.log("error", error);
-      }
-    };
-
-    fetchData();
-  },[])
+  const [data, changeData] = useState(dataJson)
+  const [displayData, changeDisplayData] = useState(data)
 
   const edit = (str) => {
     var text = str
