@@ -9,7 +9,7 @@ const letters = {
 }
 
 function App() {
-  const [data, changeData] = useState(dataJson)
+  const data = dataJson
   const [displayData, changeDisplayData] = useState(data)
 
   const edit = (str) => {
